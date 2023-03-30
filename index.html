@@ -10,7 +10,7 @@
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
-            <a href="#footer">FOOTER</a>
+
         </nav>
 
 
@@ -35,28 +35,25 @@
     <!-- home section design -->
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hello, it's Me</h3>
-            <h1>Marvellous</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis soluta suscipit fugiat, hic alias
-                excepturi aspernatur incidunt impedit iure voluptas. Maiores, sapiente. Nisi quo illo, odio labore
-                incidunt possimus eveniet.</p>
+            <h3>Hello, I'm</h3>
+            <h1>Marvin</h1>
+            <h3><span class="multiple-text"></span></h3>
+            <p>Commercial by training and after 10 years of experience in a luxury boutique, I decided to convert to the
+                digital world.</p>
             <div class="social-media">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/marvellous2710"><i class='bx bxl-github'></i></a>
+
+
+                <a href="https://www.linkedin.com/in/marvinhazael"><i class='bx bxl-linkedin'></i></a>
             </div>
             <a href="#" class="btn">Download CV</a>
         </div>
         <div class="home-img">
-            <img src="images/mh.jpeg" alt="">
+            <img src="images/WhatsApp-Video-2023-03-29-at-13.10.40.gif" alt="">
         </div>
 
 
     </section>
-
-
 
 
     <!-- about section design -->
@@ -77,7 +74,7 @@
 
     <!-- services sectino design -->
     <section class="services" id="services">
-        <h2 class="heading">Our <span>Services</span></h2>
+        <h2 class="heading">My <span>Services</span></h2>
 
         <div class="services-container">
             <div class="services-box">
@@ -90,7 +87,7 @@
             </div>
             <div class="services-box">
                 <i class='bx bxs-paint'></i>
-                <h3>Graphic Design</h3>
+                <h3>Digital Marketing</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque soluta voluptatem est perspiciatis
                     corrupti, aliquid, reiciendis omnis quibusdam expedita, numquam sunt qui commodi odio delectus rerum
                     maiores error temporibus? Dicta.</p>
@@ -98,7 +95,7 @@
             </div>
             <div class="services-box">
                 <i class='bx bx-bar-chart-alt'></i>
-                <h3>Digital Marketing</h3>
+                <h3>Video Editor</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque soluta voluptatem est perspiciatis
                     corrupti, aliquid, reiciendis omnis quibusdam expedita, numquam sunt qui commodi odio delectus rerum
                     maiores error temporibus? Dicta.</p>
@@ -113,8 +110,7 @@
 
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="images/Découvrez-trois-sites-d’images-gratuites-libre-de-droit-pour-votre-créativitée.jpeg"
-                    alt="">
+                <img src="images/istockphoto-510013861-612x612.jpeg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web design</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit deserunt eligendi
@@ -132,7 +128,7 @@
                 </div>
             </div>
             <div class="portfolio-box">
-                <img src="images/istockphoto-510013861-612x612.jpeg" alt="">
+                <img src="images/screen&.gif" alt="">
                 <div class="portfolio-layer">
                     <h4>Web design</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit deserunt eligendi
@@ -174,18 +170,28 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#">
+
+        <!-- <form action="#" method="POST"> -->
+        <form id="contactForm" action="https://formsubmit.co/a7a61372d9be939b4c5ae8a84dc126b2" method="POST">
+            <input type="hidden" name="_subject" value="New email !">
+
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="name" name="Full Name" placeholder="Full Name" id="fullName">
+                <input type="email" name="Email" placeholder="Email Address" id="emailAddress">
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" name="Number" placeholder="Mobile Number" id="mobNumber">
+                <input type="text" name="Subject" placeholder="Email Subject" id="subject">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea name="Message" id="" cols="30" rows="10" placeholder="Your message" id="messageText" required></textarea>
+          
+            <button type="submit" class="btn">Send Message</button>
+            <span id="error"></span>
         </form>
+
+      
+
+
     </section>
 
     <!-- footer design -->

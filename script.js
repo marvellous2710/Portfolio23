@@ -57,9 +57,39 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 
 //TYPED JS
 const typed = new Typed(".multiple-text", {
-  strings: ["Frontend Developer", "Youtuber", "Blogger"],
+  strings: ["Frontend Developer", "Marketing Digital", "Video Editor"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
   loop: true,
+});
+
+
+
+//CONTACT ME --------------------------------------------------------//
+
+let contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (e) {
+  let myInput      = document.getElementById("fullName");
+  let emailAddress = document.getElementById("emailAddress");
+  let mobNumber    = document.getElementById("mobNumber");
+  let subject      = document.getElementById("subject");
+  let message      = document.getElementById("messageText");
+
+  
+  let myRegex = /^[a-zA-Z-\s]+$/;
+
+
+    if (myInput.value.trim() && emailAddress.value.trim() && mobNumber.value.trim() && subject.value.trim() && message.value.trim() == "") {
+    let myError = document.getElementById("error");
+    myError.innerHTML = "Tous les champs sont requis.";
+    myError.style.color = "red";
+    e.preventDefault();
+  } else if (myRegex.test(myInput.value) == false) {
+    let myError = document.getElementById("error");
+    myError.innerHTML = "Le nom doit comporter des lettres et des tirets uniquements.";
+    myError.style.color = "red";
+    e.preventDefault();
+  }
 });
